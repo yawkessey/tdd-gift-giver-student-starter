@@ -9,15 +9,16 @@ const router = express.Router()
 const voting = {
     pepperoni: 0,
     cheese: 0, 
-    pizza: 0
+    pizza: 0,
+    hello: 1
 };
 
-router.get("/pairs", async(req, res, next) => {
+router.get("/", async(req, res, next) => {
     res.status(200).json(voting)
 })
 
 // router.get("/tradtional", async(req, res, next) => {
-//     res.status(200).json()
+//     res.status(200).json(voting)
 // })
 
 // allows other things in our app access to this module

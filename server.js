@@ -2,10 +2,8 @@
 
 //A framework that helps us create the API 
 const express = require("express");
-
 const morgan = require("morgan");
-
-const giftExchangeRouter = require("/Users/ykesseyankomah/tdd-gift-giver-student-starter/routes/voting.js")
+const pairsRouter = require("/Users/ykesseyankomah/tdd-gift-giver-student-starter/routes/gift-exchange.js")
 
 //Instantiate new instance of the application
 const app = express();
@@ -13,7 +11,7 @@ const app = express();
 
 //Looks for what kind of request and routes
 app.use(morgan("tiny"));
-app.use("/pairs", giftExchangeRouter)
+app.use("/pairs", pairsRouter)
 
 //Adds a route to application 
 app.get("/", async (req, res, next) => {
