@@ -4,6 +4,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const pairsRouter = require("/Users/ykesseyankomah/tdd-gift-giver-student-starter/routes/gift-exchange.js")
+const traditionalRouter = require("/Users/ykesseyankomah/tdd-gift-giver-student-starter/routes/gift-exchange.js")
 
 //Instantiate new instance of the application
 const app = express();
@@ -12,6 +13,7 @@ const app = express();
 //Looks for what kind of request and routes
 app.use(morgan("tiny"));
 app.use("/pairs", pairsRouter)
+app.use("/traditional", traditionalRouter)
 
 //Adds a route to application 
 app.get("/", async (req, res, next) => {
