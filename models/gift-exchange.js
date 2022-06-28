@@ -27,7 +27,7 @@ class GiftExchange {
   }
 
   static traditional(names) {
-    let randomOrder = [names.length];
+    let randomOrder = [names.length]; 
       for (let i = 0; i < names.length; i++) {
         randomOrder[i] = i;
       }

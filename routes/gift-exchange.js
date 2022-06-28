@@ -14,7 +14,7 @@ const voting = {
 };
 
 router.post("/", async (req, res, next) => {
-  res.status(200).json(voting);
+  res.status(200).json(names);
 });
 
 // router.get("/tradtional", async(req, res, next) => {
